@@ -1,0 +1,22 @@
+{
+  "name": "Grana Certa",
+  "short_name": "Grana Certa",
+  "description": "Aplicativo simples para controle financeiro pessoal.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#5b35d5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
