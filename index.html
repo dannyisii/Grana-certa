@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grana Certa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <p class="eyebrow">CONTROLE FINANCEIRO</p>
+        <h1>Grana Certa 💰</h1>
+      </div>
+      <button id="themeBtn" title="Alternar tema">☀️</button>
+    </header>
+
+    <section class="balance-card">
+      <span>Saldo atual</span>
+      <h2 id="balance">R$ 0,00</h2>
+      <div class="summary">
+        <div><small>↑ Receitas</small><strong id="income">R$ 0,00</strong></div>
+        <div><small>↓ Despesas</small><strong id="expense">R$ 0,00</strong></div>
+      </div>
+    </section>
+
+    <section class="form-card">
+      <h3>Adicionar movimentação</h3>
+      <form id="transactionForm">
+        <input id="description" type="text" placeholder="Descrição (ex: Salário)" required>
+        <div class="row">
+          <input id="amount" type="number" step="0.01" min="0.01" placeholder="Valor" required>
+          <select id="type">
+            <option value="income">Receita</option>
+            <option value="expense">Despesa</option>
+          </select>
+        </div>
+        <div class="row">
+          <select id="category">
+            <option>Salário</option>
+            <option>Alimentação</option>
+            <option>Moradia</option>
+            <option>Transporte</option>
+            <option>Saúde</option>
+            <option>Lazer</option>
+            <option>Contas</option>
+            <option>Outros</option>
+          </select>
+          <input id="date" type="date" required>
+        </div>
+        <button type="submit" class="primary">+ Adicionar</button>
+      </form>
+    </section>
+
+    <section class="list-card">
+      <div class="section-title">
+        <h3>Minhas movimentações</h3>
+        <button id="clearBtn" class="danger">Limpar tudo</button>
+      </div>
+      <div id="emptyState">Nenhuma movimentação cadastrada ainda.</div>
+      <ul id="transactionList"></ul>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
